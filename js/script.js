@@ -17,3 +17,15 @@ testWebP(function (support) {
     document.querySelector('body').classList.add('no-webp');
     }
 });
+
+const burgerButton = document.getElementById("burger");
+const closeButton = document.getElementById("close");
+const menu = document.getElementById("menu");
+
+burgerButton.addEventListener('click', function() {
+    menu.style.display = 'flex';
+})
+
+closeButton.addEventListener('click', function() {
+    menu.style.display = 'none';
+})
