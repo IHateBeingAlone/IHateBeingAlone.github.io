@@ -75,10 +75,13 @@ burgerButtonPhone.addEventListener('click', function() {
         burgerButtonPhone.classList.remove('header-bot-menu-phone-change_bg');
     } else if (menu.style.display == 'none' && courses.style.display == 'flex') {
         courses.style.display = 'none';
+        burgerButtonPhone.classList.remove('header-bot-menu-phone-change_bg');
     } else if (menu.style.display == 'none' && building.style.display == 'flex') {
         building.style.display = 'none';
+        burgerButtonPhone.classList.remove('header-bot-menu-phone-change_bg');
     } else if (menu.style.display == 'none' && geo.style.display == 'flex') {
         geo.style.display = 'none';
+        burgerButtonPhone.classList.remove('header-bot-menu-phone-change_bg');
     }
 })
 
