@@ -307,6 +307,11 @@ li {
   cursor: pointer;
 }
 
+.header-bot-menu-phone-change_bg {
+  background: url(../img/close.svg) 0 0 no-repeat !important;
+  background-size: 100% !important;
+}
+
 .header-bot-menu-phone-text {
   font-family: "circe", sans-serif;
   font-style: normal;
