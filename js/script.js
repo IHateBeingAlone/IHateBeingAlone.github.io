@@ -22,14 +22,62 @@ const burgerButton = document.getElementById("burger");
 const burgerButtonPhone = document.getElementById("burger_phone");
 const closeButton = document.getElementById("close");
 const menu = document.getElementById("menu");
+const courses = document.getElementById("courses");
+const coursesButton = document.getElementById("coursesButton");
+const coursesButtonBack = document.getElementById("coursesButtonBack");
+const building = document.getElementById("building");
+const buildingButton = document.getElementById("buildingButton");
+const buildingButtonBack = document.getElementById("buildingButtonBack");
+const geo = document.getElementById("geo");
+const geoButton = document.getElementById("geoButton");
+const geoButtonBack = document.getElementById("geoButtonBack");
 
 burgerButton.addEventListener('click', function() {
     menu.style.display = 'flex';
 })
 
+coursesButton.addEventListener('click', function() {
+    courses.style.display = 'flex';
+    menu.style.display = 'none';
+})
+
+coursesButtonBack.addEventListener('click', function() {
+    courses.style.display = 'none';
+    menu.style.display = 'flex';
+})
+
+buildingButton.addEventListener('click', function() {
+    courses.style.display = 'none';
+    building.style.display = 'flex';
+})
+
+buildingButtonBack.addEventListener('click', function() {
+    courses.style.display = 'flex';
+    building.style.display = 'none';
+})
+
+geoButton.addEventListener('click', function() {
+    geo.style.display = 'flex';
+    building.style.display = 'none';
+})
+
+geoButtonBack.addEventListener('click', function() {
+    building.style.display = 'flex';
+    geo.style.display = 'none';
+})
+
 burgerButtonPhone.addEventListener('click', function() {
-    burgerButtonPhone.classList.toggle('header-bot-menu-phone-change_bg');
-    menu.classList.toggle('header-phone_menu');
+    if (menu.style.display == 'none' && courses.style.display == 'none' && building.style.display == 'none' && geo.style.display == 'none') {
+        menu.style.display = 'flex';
+    } else if (menu.style.display == 'flex' && courses.style.display == 'none' && building.style.display == 'none' && geo.style.display == 'none') {
+        menu.style.display = 'none';
+    } else if (menu.style.display == 'none' && courses.style.display == 'flex') {
+        courses.style.display = 'none';
+    } else if (menu.style.display == 'none' && building.style.display == 'flex') {
+        building.style.display = 'none';
+    } else if (menu.style.display == 'none' && geo.style.display == 'flex') {
+        geo.style.display = 'none';
+    }
 })
 
 closeButton.addEventListener('click', function() {
