@@ -69,8 +69,10 @@ geoButtonBack.addEventListener('click', function() {
 burgerButtonPhone.addEventListener('click', function() {
     if (menu.style.display == 'none' && courses.style.display == 'none' && building.style.display == 'none' && geo.style.display == 'none') {
         menu.style.display = 'flex';
+        burgerButtonPhone.classList.add('header-bot-menu-phone-change_bg');
     } else if (menu.style.display == 'flex' && courses.style.display == 'none' && building.style.display == 'none' && geo.style.display == 'none') {
         menu.style.display = 'none';
+        burgerButtonPhone.classList.remove('header-bot-menu-phone-change_bg');
     } else if (menu.style.display == 'none' && courses.style.display == 'flex') {
         courses.style.display = 'none';
     } else if (menu.style.display == 'none' && building.style.display == 'flex') {
