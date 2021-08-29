@@ -19,11 +19,17 @@ testWebP(function (support) {
 });
 
 const burgerButton = document.getElementById("burger");
+const burgerButtonPhone = document.getElementById("burger_phone");
 const closeButton = document.getElementById("close");
 const menu = document.getElementById("menu");
 
 burgerButton.addEventListener('click', function() {
     menu.style.display = 'flex';
+})
+
+burgerButtonPhone.addEventListener('click', function() {
+    burgerButtonPhone.classList.toggle('header-bot-menu-phone-change_bg');
+    menu.classList.toggle('header-phone_menu');
 })
 
 closeButton.addEventListener('click', function() {
